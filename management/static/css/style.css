@@ -1,0 +1,347 @@
+body{
+	background-image:url("photo/background.jpg");
+}
+#main{
+	width:1024px;
+	margin:0 auto;
+}
+header{
+	height:80px;
+	width:1024;
+	margin-bottom:30px;
+}
+#logo{
+	height:80px;
+	width:150px;
+	margin:15px 20px 0 0;
+	border-radius:10px;
+	float:left;
+}
+#nav{
+	width:700px;
+	height:50px;
+	border-radius:10px;
+	float:left;
+	margin-top:35px;
+}
+#nav ul{
+	list-style:none;
+}
+#nav ul li{
+	float:left;
+}
+#nav ul li a
+{
+	color:#000;
+	text-decoration:none;
+	padding:8px;
+	font-family:"Helvetica Neue";
+	border-radius:10px;
+	font-size:16px;	
+}
+#nav_sign{
+	width:154px;
+	height:50px;
+	border-radius:10px;
+	float:left;
+	margin-top:35px;
+}
+#nav_sign ul{
+	list-style:none;
+}
+#nav_sign ul li{
+	float:left;
+}
+#nav_sign ul li a
+{
+color:#000;
+text-decoration:none;
+font-family:"Helvetica Neue";
+border-radius:10px;
+font-size:17px;	
+}
+#nav ul li:hover > ul
+{
+display: block;
+}
+#nav ul li a:hover
+{
+color:#ff00ff;
+text-decoration:underline;
+}
+#nav_sign ul li:hover > ul
+{
+display: block;
+}
+#nav_sign ul li a:hover
+{
+color:#D3080B;
+text-decoration:underline;
+}
+#nav ul li a.current
+{
+color: #000;
+font-weight:bold;
+}
+#content {
+	width:1024px;
+	margin-bottom:50px;
+	float:left;
+}
+#loginbox{
+	width:580px;
+	height:320px;
+	background-color:rgba(247,247,245,0.9);
+	color:#fff;
+	position:relative;
+	left:50%;
+	transform:translate(-50%,10%);
+	box-sizing:border-box;
+	padding:30px 20px 0 0;
+}
+h1{
+	margin:0;
+	padding:0 0 15px 15px;
+	text-align: center;
+	font-size:22px;
+	color:#000;
+}
+#loginbox input{
+	width:330px;
+	margin-bottom:15px;
+}
+#loginbox input[type="text"], input[type="password"]
+{
+	border:none;
+	border-bottom:1px solid #fff;
+	background:tranparent;
+	outline:none;
+	color:#000;
+	height:30px;
+	font-size:16px;
+	margin-left:130px;
+	border-radius:5px;
+}
+#loginbox input[type="submit"]
+{
+	border:none;
+	outline:none;
+	height:35px;
+	background:#fb2525;
+	color:#fff;
+	font-size:18px;
+	margin-left:130px;
+	border-radius:5px;
+}
+#loginbox input[type="submit"]:hover
+{
+	cursor:pointer;
+	background:#ffc107;
+	color:#000;
+}
+#loginbox a{
+	text-decoration:none;
+	font-size:12;
+	color:darkgrey;	
+	margin-left:240px;
+}
+#loginbox a:hover
+{
+	color: #ffc107;
+}
+#loginbox a.create{
+	margin-left:0px;
+}
+#loginbox button{
+	margin-left:225px;
+	height:30px;
+	background:green;
+	outline:none;
+	border:none;
+	color:#fff;
+	font-size:18px;
+	border-radius:5px;					
+}
+#loginbox button:hover
+{
+	cursor:pointer;
+	background:#ffc107;
+	color:#000;
+}
+#lblemail{
+	color:red;
+	visibility:hidden;
+}
+#lblpwd{
+	color:red;
+	visibility:hidden;
+}
+.registerbox{
+	width:580px;
+	height:540px;
+	background-color:rgba(247,247,245,0.9);
+	color:#000;
+	left:50%;
+	position:absolute;
+	transform:translate(-50%,0%);
+	box-sizing:border-box;
+	padding:30px 20px 0 0;
+	margin-top:20px;
+}
+h1{
+	margin:0;
+	padding:0 0 15px 15px;
+	text-align: center;
+	font-size:22px;
+	color:#000;
+}
+h2{
+	margin:0;
+	padding:0 0 15px 15px;
+	text-align: center;
+	font-size:15px;
+	color:#000;
+}
+.registerbox input{
+	margin-bottom:15px;
+}
+.registerbox input[name="Name"]{
+	border:none;
+	border-bottom:1px solid #fff;
+	background:tranparent;
+	outline:none;
+	color:#000;
+	height:30px;
+	font-size:16px;
+	margin-left:70px;
+	border-radius:5px;
+	width:200px;
+}
+.registerbox input[name="LastName"]{
+	border:none;
+	border-bottom:1px solid #fff;
+	background:tranparent;
+	outline:none;
+	color:#000;
+	height:30px;
+	font-size:16px;
+	margin-left:10px;
+	border-radius:5px;
+	width:200px;
+}
+.registerbox input[name="Email"]
+{
+	border:none;
+	border-bottom:1px solid #fff;
+	background:tranparent;
+	outline:none;
+	color:#000;
+	height:30px;
+	font-size:16px;
+	margin-left:70px;
+	border-radius:5px;
+	width:415px;
+}
+.registerbox input[type="password"]
+{
+	border:none;
+	border-bottom:1px solid #fff;
+	background:tranparent;
+	outline:none;
+	color:#000;
+	height:30px;
+	font-size:16px;
+	margin-left:70px;
+	border-radius:5px;
+	width:415px;
+}
+.registerbox input[type="submit"]
+{
+	border:none;
+	outline:none;
+	height:35px;
+	width:150px;
+	background:#fb2525;
+	color:#fff;
+	font-size:18px;
+	margin-left:70px;
+	border-radius:5px;
+}
+.registerbox input[type="date"]
+{
+	border:none;
+	border-bottom:1px solid #fff;
+	background:tranparent;
+	outline:none;
+	color:#000;
+	height:30px;
+	font-size:16px;
+	margin-left:10px;
+	border-radius:5px;
+	width:320px;
+}
+.registerbox input[type="submit"]:hover
+{
+	cursor:pointer;
+	background:#ffc107;
+	color:#000;
+}
+.registerbox a{
+	text-decoration:none;
+	font-size:12;
+	color:darkgrey;	
+	margin-left:240px;
+}
+.registerbox a:hover
+{
+	color: #ffc107;
+}
+#lbl{
+	color:#000;
+	margin-left:70px;
+}
+#agreement{
+	margin-left:70px;
+	margin-right:70px;
+	font-size:13px;
+	color:#000;
+}
+.registerbox input[type="radio"]{
+	margin-left:70px;
+}
+footer{
+	width:1024px;
+	background:red;
+	float:left;
+}
+#company{
+	width:200px;
+	background:white;
+	float:left;
+}
+#contact{
+	width:280px;
+	background:yellow;
+	float:left;
+}
+#more{
+	width:280px;
+	background:blue;
+	float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

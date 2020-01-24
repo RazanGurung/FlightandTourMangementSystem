@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Flights | Gantabbe</title>
+	<link href="{% static 'css/style.css ' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="main">
+	<header>
+		<div id="logo">
+			<a href="index.html"><img src="photo/logo.png" alt="Flight and Tour logo" /></a>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="index.html">Flight</a></li>
+				<li><a href="packages.html">Packages</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="rental.html">Rental Services</a></li>
+				<li><a href="news.html">NEWS/Article</a></li>
+				<li><a href="explore.html">Explore</a></li>
+				<li><a href="tricks.html">Tips & Trick</a></li>
+			</ul>
+		</div>	
+		<div id="nav_sign">
+			<ul><li ><a href="login.html" class="current">sign in</a></li></ul>
+		</div>
+	</header>
+	<div class="content">
+			<div class="registerbox">
+				<h1>Create a New Account</h1>
+				<h2>It's quick and easy.</h2>
+				<form>
+					<input type="text" name="Name" placeholder=" First name">
+					<input type="text" name="LastName" placeholder=" Last name">
+					<input type="text" name="Email" placeholder=" Email or Phone number">
+					<input type="password" id="pwd" placeholder=" Password">
+					<input type="password" id="pwd" placeholder=" Confirm Password">
+					<label id="lbl">Gender</label><br></br>
+					<input type="radio" name="gender" value="male"> Male</input>
+					<input type="radio" name="gender" value="female"> Female</input>
+				    <input type="radio" name="gender" value="other"> Other </input><br>
+					<label id="lbl">Date of Birth</label>
+					<input type = "date" /><br>
+					<p id="agreement">
+					   By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy.
+					   You may receive SMS Notifications from us and can opt out any time.
+					</p>
+					<input type="submit" value="Register">	
+				</form>
+		</div>
+		<footer class="footer">
+		
+		</footer>
+	</div>
+</div>
+</body>
+</html>
