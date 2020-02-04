@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	{% load static %}
+	<title>Flights | Gantabbe</title>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+	<header>
+		<div id="nav">
+			<ul>
+				<li><a href="/index" class="current">Flight</a></li>
+				<li><a href="/packages">Packages</a></li>
+				<li><a href="/gallery">Gallery</a></li>
+				<li><a href="/rental">Rental Services</a></li>
+				<li><a href="/news">NEWS/Article</a></li>
+				<li><a href="/tricks">Tips & Trick</a></li>
+			</ul>
+		</div>	
+		<div id="nav_sign">
+			<ul><li ><a href="/login">sign in</a></li></ul>
+		</div>
+	</header>
+	{% block content %}
+    {% endblock %}
+	<footer>
+		<div id="company">
+			<label class="footer_label">Company</label>
+			<ul>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">Mobile</a></li>
+				<li><a href="#">Blog</a></li>
+            </ul>
+		</div>
+		<div id="contact">
+			<label class="footer_label">Contact</label>
+			<ul>
+				<li><a href="#">Help/FAQ</a></li>
+				<li><a href="#">Press</a></li>
+				<li>9824346644/01-3423554</li>
+				<li>gantabbe_flight2147@gmail.com</li>
+			</ul>
+		</div>
+		<div id="more">
+			<label class="footer_label">More</label>
+			<ul>
+				<li><a href="#">Learn More</a></li>
+				<form>
+					<input type="text" name="subscribe" placeholder="Enter Email"><br>
+					<button>Subscribe us</button>
+				</form>
+			</ul>
+		</div>
+		<div id="social_media">
+			<label >Follow us on:</label>
+			<a href="https://www.facebook.com/"><img src="{% static 'photo/facebook.png' %}" alt="facebook logo" /></a>
+			<a href="https://www.instagram.com/"><img src="{% static 'photo/instagram.png' %}" alt="Instagram logo" /></a>
+			<a href="https://twitter.com/login"><img src="{% static 'photo/twitter.png' %}" alt="twiter logo" /></a>
+			<a href="https://www.whatsapp.com/"><img src="{% static 'photo/whatsapp.png' %}" alt="Whatsapp logo" /></a>
+		</div>
+		<div id="copyright">
+			<label> Copyright Reserved &amp; 2020.|Gantabbe|</label>
+				<p><a href="#">Terms & condition</a>|<a href="#">Privacy Policy</a>|<a href="#">Cookies policy</a>|<a href="#">Find us? </a></p>
+		</div>
+	</footer>
+</body>
+</html>

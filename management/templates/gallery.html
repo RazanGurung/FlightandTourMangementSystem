@@ -1,35 +1,133 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-	<title>Flights | Gantabbe</title>
-	<link href="{% static 'css/style.css ' %}" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="main">
-	<header>
-		<div id="logo">
-			<a href="index.html"><img src="photo/logo.png" alt="Flight and Tour logo" /></a>
-		</div>
-		<div id="nav">
-			<ul>
-				<li><a href="index.html" >Flight</a></li>
-				<li><a href="packages.html">Packages</a></li>
-				<li><a href="gallery.html" class="current">Gallery</a></li>
-				<li><a href="rental.html">Rental Services</a></li>
-				<li><a href="news.html">NEWS/Article</a></li>
-				<li><a href="explore.html">Explore</a></li>
-				<li><a href="tricks.html">Tips & Trick</a></li>
-			</ul>
-		</div>	
-		<div id="nav_sign">
-			<ul><li ><a href="login.html">sign in</a></li></ul>
-		</div>
-	</header>
+{% extends "layout.html" %}
+{% block content %}
+    {% load static %}
 	<div id="content">
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/portugal.jpg' %}" alt="spain image" />
+		</div>
+		<div class="details">
+			<label>Lisbon, Portugal
+			<p>Booking avaiable 088-4554679</p>
+		</div>
 	</div>
-	<footer>
-		<h1>My name is razan gurung</h1>
-	</footer>
+
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/spain.jpg' %}" alt="spain image" />
+		</div>
+		<div class="details">
+			Madrid, Spain
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/hungary1.jpg' %}" alt="hungary image" />
+		</div>
+		<div class="details">
+			Budapest, Hungary
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
+
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/austriaseen.jpg' %}" alt="austria image" />
+		</div>
+		<div class="details">
+			Vienna, Austria
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/london.jpg' %}" alt="london image" />
+		</div>
+		<div class="details">
+			London, England
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
+
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/Italy.jpg' %}" alt="italy image" />
+		</div>
+		<div class="details">
+			Rome, Italy
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
+
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/malta.jpg' %}" alt="malta image" />
+		</div>
+		<div class="details">
+			Vlletta, Malta
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
+
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/switzerland1.jpg' %}" alt="switzerland image" />
+		</div>
+		<div class="details">
+			Bern, Switzerland
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
+
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/germany1.jpg' %}" alt="germany image" />
+		</div>
+		<div class="details">
+			Berlin, Germany
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
+
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/poland.jpg' %}" alt="poland image" />
+		</div>
+		<div class="details">
+			Warsaw, Poland
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
+		
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/seen1.jpg' %}" alt="seen image" />
+		</div>
+		<div class="details">
+			Brussels, Belgium
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
+
+	<div class="photos">
+		<div class="show-photo">
+			<img src="{% static 'photo/sweden.jpg' %}" alt="sweden image" />
+		</div>
+		<div class="details">
+			Stockholm, Sweden
+			<p>Booking avaiable 088-4554679</p>
+		</div>
+	</div>
 </div>
-</body>
-</html>
+{% endblock %}

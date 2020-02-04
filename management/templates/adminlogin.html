@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Flights | Gantabbe</title>
+	{% load static %}
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<a href="index.html"><img src="photo/logo.png" alt="Flight and Tour logo" /></a>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="/index">Flight</a></li>
+				<li><a href="/packages">Packages</a></li>
+				<li><a href="/gallery">Gallery</a></li>
+				<li><a href="/rental">Rental Services</a></li>
+				<li><a href="/news">NEWS/Article</a></li>
+				<li><a href="/tricks">Tips & Trick</a></li>
+			</ul>
+		</div>	
+		<div id="nav_sign">
+			<ul><li><a href="/register" class="current">sign up</a></li></ul>
+		</div>
+	</header>
+	<div id="content">
+		<div id="loginbox">
+			<h1>Log into GANTABBE</h1>
+			<form onsubmit="return loginvalidation()" action="dashboard" method="post">
+                {% csrf_token %}
+				<input type="text" id="email" name= "email" placeholder=" Email " value="{{ register.email }}">
+				<label id="emaillbl">invalid</label>
+				<input type="password" id="pwd" placeholder=" Password" name ="password" value="{{ register.password }}">
+				<label id="pwdlbl">invalid</label>
+				<input type="submit" value="Log In"><br>
+			</form>
+		</div>
+	</div>
+<script src="{% static 'javascript/login.js' %}"></script>
+</body>
+</html>

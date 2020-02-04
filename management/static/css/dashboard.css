@@ -1,0 +1,21 @@
+#btnadd{
+	float:right;
+}
+
+#search{
+	float:left;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+.sidebar .list-group-item a {
+	text-decoration:none;
+	    color: #495057;
+}
+
+.sidebar .active a {
+	color:white
+}

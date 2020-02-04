@@ -1,28 +1,12 @@
-body{
-	background-image:url("photo/background.jpg");
-}
-#main{
-	width:1024px;
-	margin:0 auto;
-}
-header{
-	height:80px;
-	width:1024;
-	margin-bottom:30px;
-}
-#logo{
-	height:80px;
-	width:150px;
-	margin:15px 20px 0 0;
-	border-radius:10px;
-	float:left;
+body{    
+    margin:  0;
+    height: auto;
 }
 #nav{
-	width:700px;
+    background: #282525;
 	height:50px;
-	border-radius:10px;
+    width:1214px;
 	float:left;
-	margin-top:35px;
 }
 #nav ul{
 	list-style:none;
@@ -32,19 +16,18 @@ header{
 }
 #nav ul li a
 {
-	color:#000;
+	color: azure;
 	text-decoration:none;
 	padding:8px;
 	font-family:"Helvetica Neue";
 	border-radius:10px;
-	font-size:16px;	
+	font-size:18px;
 }
 #nav_sign{
-	width:154px;
+	width:135px;
 	height:50px;
-	border-radius:10px;
-	float:left;
-	margin-top:35px;
+	float:right;
+    background: #282525;
 }
 #nav_sign ul{
 	list-style:none;
@@ -54,11 +37,10 @@ header{
 }
 #nav_sign ul li a
 {
-color:#000;
+color: azure;
 text-decoration:none;
 font-family:"Helvetica Neue";
-border-radius:10px;
-font-size:17px;	
+font-size:18px;
 }
 #nav ul li:hover > ul
 {
@@ -80,11 +62,68 @@ text-decoration:underline;
 }
 #nav ul li a.current
 {
-color: #000;
-font-weight:bold;
+    color: #fff;
+    font-weight:bold;
+}
+#cover{
+    background-image: url('cover.jpg'); 
+    background-size: cover;
+    height: 600px;
+}
+#cover img{
+    max-height: 100%;
+    max-width: 100%;
+}
+#cover label{
+    color: aliceblue;
+    font-family: Arial;
+    text-decoration: none;
+    margin-left: 200px;
+    font-size: 40px;
+}
+#searchcontainer
+{
+	height:60px;
+	width:1000px;
+	margin:300px 0 0 260px;
+}
+#searchcontainer label
+{
+    color: #000;
+    font-family: serif;
+    font-size: 30px;padding-left: 90px;
+}
+#searchcontainer input[type="text"]
+{
+	float:left;
+	height:70%;
+	outline:none;
+	padding:3px;
+	outline:none;
+	transition:1s all;
+	color:#000;
+    background: #fff;
+}
+.searchbtn
+{
+	position:absolute;
+	width:100px;
+	height:53px;
+	border:#00b4cc;
+	text-align:center;
+	cursor:pointer;
+	font-size:30px;
+	background-color:rgba(0, 0, 0,0.8);
+	color:#FFF;
+    border-radius:0 10px 10px  0 ;
+}
+.package{
+    background: red;
+    height: 400px;
+    width:400px;
+    margin: 0px 30px;
 }
 #content {
-	width:1024px;
 	margin-bottom:50px;
 	float:left;
 }
@@ -94,8 +133,7 @@ font-weight:bold;
 	background-color:rgba(247,247,245,0.9);
 	color:#fff;
 	position:relative;
-	left:50%;
-	transform:translate(-50%,10%);
+	transform:translate(65%,10%);
 	box-sizing:border-box;
 	padding:30px 20px 0 0;
 }
@@ -114,7 +152,6 @@ h1{
 {
 	border:none;
 	border-bottom:1px solid #fff;
-	background:tranparent;
 	outline:none;
 	color:#000;
 	height:30px;
@@ -138,12 +175,12 @@ h1{
 	cursor:pointer;
 	background:#ffc107;
 	color:#000;
-}
+} 
 #loginbox a{
 	text-decoration:none;
-	font-size:12;
-	color:darkgrey;	
-	margin-left:240px;
+	font-size:12px;
+	color:darkgrey;
+	margin-left:250px;
 }
 #loginbox a:hover
 {
@@ -160,7 +197,7 @@ h1{
 	border:none;
 	color:#fff;
 	font-size:18px;
-	border-radius:5px;					
+	border-radius:5px;
 }
 #loginbox button:hover
 {
@@ -168,25 +205,22 @@ h1{
 	background:#ffc107;
 	color:#000;
 }
-#lblemail{
-	color:red;
-	visibility:hidden;
+#emaillbl{
+    color: red;
+	visibility: hidden;
 }
-#lblpwd{
-	color:red;
-	visibility:hidden;
+#pwdlbl{
+    color: red;
+	visibility: hidden;
 }
 .registerbox{
 	width:580px;
 	height:540px;
+    position:relative;
 	background-color:rgba(247,247,245,0.9);
-	color:#000;
-	left:50%;
-	position:absolute;
-	transform:translate(-50%,0%);
 	box-sizing:border-box;
-	padding:30px 20px 0 0;
-	margin-top:20px;
+    margin-left: 400px;
+    transform: translate(0%,15%);
 }
 h1{
 	margin:0;
@@ -205,10 +239,9 @@ h2{
 .registerbox input{
 	margin-bottom:15px;
 }
-.registerbox input[name="Name"]{
+.registerbox input[name="first_name"]{
 	border:none;
 	border-bottom:1px solid #fff;
-	background:tranparent;
 	outline:none;
 	color:#000;
 	height:30px;
@@ -217,10 +250,9 @@ h2{
 	border-radius:5px;
 	width:200px;
 }
-.registerbox input[name="LastName"]{
+.registerbox input[name="last_name"]{
 	border:none;
 	border-bottom:1px solid #fff;
-	background:tranparent;
 	outline:none;
 	color:#000;
 	height:30px;
@@ -229,11 +261,10 @@ h2{
 	border-radius:5px;
 	width:200px;
 }
-.registerbox input[name="Email"]
+.registerbox input[name="email"]
 {
 	border:none;
 	border-bottom:1px solid #fff;
-	background:tranparent;
 	outline:none;
 	color:#000;
 	height:30px;
@@ -246,7 +277,6 @@ h2{
 {
 	border:none;
 	border-bottom:1px solid #fff;
-	background:tranparent;
 	outline:none;
 	color:#000;
 	height:30px;
@@ -271,7 +301,6 @@ h2{
 {
 	border:none;
 	border-bottom:1px solid #fff;
-	background:tranparent;
 	outline:none;
 	color:#000;
 	height:30px;
@@ -288,7 +317,7 @@ h2{
 }
 .registerbox a{
 	text-decoration:none;
-	font-size:12;
+	font-size:12px;
 	color:darkgrey;	
 	margin-left:240px;
 }
@@ -309,34 +338,136 @@ h2{
 .registerbox input[type="radio"]{
 	margin-left:70px;
 }
+#content .photos
+{
+height: 180px;
+width: 270px;
+border: 5px inset gold;
+box-shadow: #000 5px 5px 5px;
+float: left;
+margin:20px;
+position:relative;
+display: block;
+box-sizing:border-box;
+}
+#content .photos .show-photo 
+{
+height: 180px;
+width: 270px;
+position:relative;
+}
+#content .photos .show-photo img
+{
+	height:170px;
+	width:260px;
+	transition:transform 2s;
+}
+#content .photos:hover .show-photo img
+{
+transform:scale(1.2);
+}
+#content .photos .details
+{
+	position:absolute;
+	top:100px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	background-color:rgba(0,0,0,0.4);
+	color:#FFF;
+	font-size:20px;
+	text-align:center;
+	display:none;
+}
+#content .photos:hover .details
+{
+	display:block;
+}
 footer{
-	width:1024px;
-	background:red;
+	background:rgba(0,0,0,0.3);
 	float:left;
+	margin-top:10px;
 }
 #company{
-	width:200px;
-	background:white;
+	margin-left:200px;
+	width:350px;
 	float:left;
+}
+#company ul{
+	list-style:none;
+}
+#company ul li{
+	margin-left:-30px;  
+}
+#company ul li a{
+    color: #000;
 }
 #contact{
-	width:280px;
-	background:yellow;
+	width:370px;
 	float:left;
+}
+#contact ul{
+	list-style:none;
+}
+#contact ul li{
+	margin-left:-30px;
+}
+#contact ul li a{
+    color: #000;
 }
 #more{
-	width:280px;
-	background:blue;
+	width:300px;
 	float:left;
+	margin-right:100px;
 }
-
-
-
-
-
-
-
-
+#more ul{
+	list-style:none;
+}
+#more ul li{
+	margin-left:-30px;
+}
+#more ul li a{
+    color: #000;
+}
+.footer_label{
+	font-size:20px;
+}
+#more form{
+	margin-left:-30px;
+	margin-top:5px;
+}
+#more form button{
+	background:red;
+	margin-top:5px;
+}
+#social_media{
+	float:left;
+	margin-left:500px;
+}
+#social_media img{
+	height:50px;
+	width:50px;
+}
+#social_media label{
+	margin-right:5px;
+}
+#copyright
+{
+    width:1300px    ;
+	height:30px;
+	float:left;
+	margin-top:15px;
+}
+#copyright label{
+	padding-left:570px;
+}
+#copyright p{
+	font-size:11px;
+	float:right; 
+}
+#copyright p a{
+    color:#000;
+}
 
 
 

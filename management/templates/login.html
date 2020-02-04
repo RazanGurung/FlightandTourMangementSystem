@@ -1,48 +1,30 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+	{% load static %}
 	<title>Flights | Gantabbe</title>
-	<link href="{% static 'css/style.css ' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="main">
-	<header>
-		<div id="logo">
-			<a href="index.html"><img src="photo/logo.png" alt="Flight and Tour logo" /></a>
-		</div>
-		<div id="nav">
-			<ul>
-				<li><a href="index.html">Flight</a></li>
-				<li><a href="packages.html">Packages</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="rental.html">Rental Services</a></li>
-				<li><a href="news.html">NEWS/Article</a></li>
-				<li><a href="explore.html">Explore</a></li>
-				<li><a href="tricks.html">Tips & Trick</a></li>
-			</ul>
-		</div>	
-		<div id="nav_sign">
-			<ul><li><a href="register.html" class="current">sign up</a></li></ul>
-		</div>
-	</header>
-	<div id="content">
-		<div id="loginbox">
-			<h1>Log into GANTABBE</h1>
-			<form onsubmit="return loginvalidation()" >
-				<input type="text" id="email" placeholder=" Email or Phone Number">
-				<label id="lblemail">invalid</label>
-				<input type="password" id="pwd" placeholder=" Password">
-				<label id="lblpwd">invalid</label>
-				<input type="submit" value="Log In"><br>
-				<a href="#">forgot password?</a><br></br>
-			</form>
-			<a href="register.html" class="create"><button>Create Account</button></a>
-		</div>
-	</div>
-	<footer>
-		<h1>What is your name</h1>
-	</footer>
-</div>
-	<script src="login.js"></script>
+    <div id="content">
+        <div id="loginbox">
+            <h1>Log into GANTABBE</h1>
+            <form  action='loginpage' method='POST'>
+                {% csrf_token %}
+                <input type="text" id="email" name="email" placeholder=" Email ">
+                <label id="emaillbl">invalid</label>
+                <input type="password" id="pwd" placeholder=" Password" name="password">
+                <label id="pwdlbl">invalid</label>
+                <input type="submit" value="Login"><br>
+                <a href="#">forgot password?</a><br>
+                <a href="/adminlogin"> admin login</a><br>
+            </form>
+            <a href="/register" class="create">
+                <button>Create Account</button>
+            </a>
+        </div>
+    </div>
 </body>
 </html>
+
+	

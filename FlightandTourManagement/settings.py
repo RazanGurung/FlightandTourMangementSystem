@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'FlightandTourManagement.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'dbflightandtour',
+        'NAME':'dbflightandtourmanagement',
         'USER':'root',
         'PASSWORD': '',
         'HOST':'127.0.0.1',
