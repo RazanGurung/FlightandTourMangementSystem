@@ -1,0 +1,34 @@
+{% extends "dashboard_layout.html" %}
+{% block content %}
+ {% load static %}
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+            <th>Action</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.user_id }}</td>
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.password }}</td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.dob }}</td>
+            <td><a href="/client_edit/{{ user.user_id }}">edit</a>|<a href="/client_delete/{{ user.user_id }}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+<script>
+	$(document).ready(()=>{
+		$(".sidebar").find(".active").removeClass("active");
+		$("#client").addClass("active")
+    })
+</script>
+{% endblock %}

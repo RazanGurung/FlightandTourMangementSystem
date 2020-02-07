@@ -1,133 +1,16 @@
 {% extends "layout.html" %}
 {% block content %}
     {% load static %}
-	<div id="content">
-
+<div id="gallery_content">
+    {% for gall in galls %}
 	<div class="photos">
 		<div class="show-photo">
-			<img src="{% static 'photo/portugal.jpg' %}" alt="spain image" />
+			<img src="{% static '/photo/' %}{{ gall.image }}" alt="spain image" />
 		</div>
 		<div class="details">
-			<label>Lisbon, Portugal
-			<p>Booking avaiable 088-4554679</p>
+            <label>{{ gall.Number }}</label>
 		</div>
 	</div>
-
-
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/spain.jpg' %}" alt="spain image" />
-		</div>
-		<div class="details">
-			Madrid, Spain
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
-
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/hungary1.jpg' %}" alt="hungary image" />
-		</div>
-		<div class="details">
-			Budapest, Hungary
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
-
-
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/austriaseen.jpg' %}" alt="austria image" />
-		</div>
-		<div class="details">
-			Vienna, Austria
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
-
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/london.jpg' %}" alt="london image" />
-		</div>
-		<div class="details">
-			London, England
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
-
-
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/Italy.jpg' %}" alt="italy image" />
-		</div>
-		<div class="details">
-			Rome, Italy
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
-
-
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/malta.jpg' %}" alt="malta image" />
-		</div>
-		<div class="details">
-			Vlletta, Malta
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
-
-
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/switzerland1.jpg' %}" alt="switzerland image" />
-		</div>
-		<div class="details">
-			Bern, Switzerland
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
-
-
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/germany1.jpg' %}" alt="germany image" />
-		</div>
-		<div class="details">
-			Berlin, Germany
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
-
-
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/poland.jpg' %}" alt="poland image" />
-		</div>
-		<div class="details">
-			Warsaw, Poland
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
-		
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/seen1.jpg' %}" alt="seen image" />
-		</div>
-		<div class="details">
-			Brussels, Belgium
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
-
-	<div class="photos">
-		<div class="show-photo">
-			<img src="{% static 'photo/sweden.jpg' %}" alt="sweden image" />
-		</div>
-		<div class="details">
-			Stockholm, Sweden
-			<p>Booking avaiable 088-4554679</p>
-		</div>
-	</div>
+    {% endfor %}
 </div>
 {% endblock %}

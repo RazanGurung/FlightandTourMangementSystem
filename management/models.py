@@ -11,19 +11,30 @@ class USER(models.Model):
     GENDER_CHOICES = (
         ('M', 'Male'),
         ('F', 'Female'),
+        ('O', 'Other')
     )
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
 
     class Meta:
         db_table = "user_data"
 
-class Destination(models.Model):
-    D_Id=models.AutoField(auto_created=True, primary_key=True)
-    image= models.ImageField(upload_to='photo')
-    description= models.TextField()
-    price = models.IntegerField()
-    offer=models.BooleanField(default=False)
 
+class Destination(models.Model):
+    D_Id = models.AutoField(auto_created=True, primary_key=True)
+    Name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='static/photo')
+    description = models.CharField(max_length=100)
+    price = models.IntegerField()
 
     class Meta:
         db_table = "Destination_Info"
+
+
+class Gallery(models.Model):
+    G_Id = models.AutoField(auto_created=True, primary_key=True)
+    Name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='static/photo')
+    Number = models.CharField(max_length=50)
+
+    class Meta:
+        db_table = "our_gallery"

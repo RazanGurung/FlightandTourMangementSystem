@@ -20,24 +20,22 @@
       <a class="nav-link" href="#">Link</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
+      <a class="nav-link disabled" href="#">Logout</a>
     </li>
   </ul>
 </nav>
-
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-2" style="padding:0px; height: 100vh;
     border: solid 1px #dfdfdf;">
 <ul class="list-group sidebar" >
-	<li id="user" class="list-group-item list-group-item-action"><a href="/">User</a></li>
-	<li id="vendor" class="list-group-item list-group-item-action active"><a href="/vendor">Vendor</a></li>
-	<li class="list-group-item list-group-item-action">Product</li>
-	<li class="list-group-item list-group-item-action">Sales</li>
+	<li id="Package" class="list-group-item list-group-item-action active"><a href="/package_dashboard">Packages</a></li>
+	<li id="gallery" class="list-group-item list-group-item-action"><a href="/gallery_dashboard">Gallery</a></li>
+	<li id="service" class="list-group-item list-group-item-action">Services</li>
+    <li id="client" class="list-group-item list-group-item-action"><a href="/dashboard_client">Client</a></li>
 </ul>
 </div>
 <div class="col-md-10">
-{{ users }}
 {% block content %}
 {% endblock %}
 </div>

@@ -1,0 +1,18 @@
+{% extends "dashboard_layout.html" %}
+{% block content %}
+    {% load static %}
+    <div class="create">
+        <form method="post" action="/create_package" enctype="multipart/form-data">
+            {% csrf_token %}
+            Name :{{ destform.Name }}<br>
+            Description:{{ destform.description }}<br>
+            Price:{{ destform.price }}<br>
+            Image:{{ destform.image }}<br>
+            <button type="submit">submit</button>
+            {% for message in messages %}
+                {{ message }}
+
+            {% endfor %}
+        </form>
+    </div>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django import forms
-from management.models import USER
+from management.models import USER, Destination, Gallery
 
 
 class userform(forms.ModelForm):
@@ -7,6 +7,22 @@ class userform(forms.ModelForm):
 
     class Meta:
         model = USER
+        fields = "__all__"
+
+
+class destinationform(forms.ModelForm):
+    image = forms.ImageField()
+
+    class Meta:
+        model = Destination
+        fields = "__all__"
+
+
+class galleryform(forms.ModelForm):
+    image = forms.ImageField()
+
+    class Meta:
+        model = Gallery
         fields = "__all__"
 
 

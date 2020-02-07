@@ -1,0 +1,14 @@
+{% extends "dashboard_layout.html" %}
+{% block content %}
+    {% load static %}
+<form method="post" action="/package_update/{{ destin.D_Id }}" enctype="multipart/form-data">
+{% csrf_token %}
+<input type="text" value="{{ destin.Name }}" name="destination" id="id_destination"/>
+    {% load static %}
+<img width="100" src="{% static '/photo/'%}{{ destin.image }}" />
+<input type="file" name="image" id="id_image"/>
+<input type="text" value="{{ destin.description }}" name="description" id="id_description" />
+<input type="text" value="{{ destin.price }}" name="price" id="id_price"/>
+<button>submit</button>
+    {% endblock content %}
+</form>

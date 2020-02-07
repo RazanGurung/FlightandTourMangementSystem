@@ -1,0 +1,13 @@
+{% extends "dashboard_layout.html" %}
+{% block content %}
+<form method="post" action="/gallery_update/{{ destin.D_Id }}" enctype="multipart/form-data">
+{% csrf_token %}
+<input type="text" value="{{ gal.Name }}" name="destination" />
+    {% load static %}
+<img width="100" src="{% static '/photo/'%}{{ gal.image }}" />
+<input type="file" name="image" />
+<input type="text" value="{{ gal.Number }}" name="description" />
+
+<button>submit</button>
+</form>
+{% endblock content %}

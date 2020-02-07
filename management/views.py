@@ -1,10 +1,8 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
-from management.models import USER
-from management.forms import userform
-from django.http import HttpResponseRedirect, HttpResponse
-from django.urls import reverse
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import authenticate
+
+from management.forms import destinationform, galleryform
+from management.models import USER, Destination, Gallery
 from management.Authenticate import Authenticate
 
 
@@ -23,12 +21,82 @@ def loginpage(request):
     return redirect('/dashboard')
 
 
-def dashboard(request):
-    return render(request, "dashboard.html")
+def Package_dashboard(request):
+    dests = Destination.objects.all()
+    return render(request, "package_dashboard.html", {'dests': dests})
 
 
 def admin(request):
     return render(request, "adminlogin.html")
+
+
+def create_package(request):
+    if request.method == 'POST':
+        destform = destinationform(request.POST, request.FILES)
+        destform.save()
+        return redirect("/create_package")
+        return messages.SUCCESS
+    else:
+        destform = destinationform()
+    return render(request, 'create_packages.html', {'destform': destform})
+
+
+def package_edit(request, id):
+    destin = Destination.objects.get(D_Id=id)
+    return render(request, 'package_edit.html', {'destin': destin})
+
+
+def package_update(request, id):
+    dest = Destination.objects.get(D_Id=id)
+    destform = destinationform(request.POST, request.FILES, instance=dest)
+    destform.save()
+    return redirect('/package_dashboard')
+
+
+def package_delete(request, id):
+    Destination.objects.get(D_Id=id).image.delete()
+    dest = Destination.objects.get(D_Id=id)
+    dest.delete()
+    return redirect('/package_dashboard')
+
+
+def gallery_dashboard(request):
+    galls = Gallery.objects.all()
+    return render(request, "gallery_dashboard.html", {'galls': galls})
+
+
+def create_gallery(request):
+    if request.method == 'POST':
+        gal_form = galleryform(request.POST, request.FILES)
+        gal_form.save()
+        return redirect("/create_gallery")
+    else:
+        gal_form = galleryform()
+    return render(request, 'create_gallery.html', {'gal_form': gal_form})
+
+
+def gallery_edit(request, id):
+    gal = Gallery.objects.get(G_Id=id)
+    return render(request, 'gallery_edit.html', {'gal': gal})
+
+
+def gallery_update(request, id):
+    gal = Destination.objects.get(G_Id=id)
+    gal_form = destinationform(request.POST, request.FILES, instance=gal)
+    gal_form.save()
+    return redirect('/gallery_dashboard')
+
+
+def gallery_delete(request, id):
+    Gallery.objects.get(G_Id=id).image.delete()
+    gall = Gallery.objects.get(G_Id=id)
+    gall.delete()
+    return redirect('/gallery_dashboard')
+
+
+def dashboard_client(request):
+    users = USER.objects.all()
+    return render(request, 'dashboard_client.html', {'users': users})
 
 
 def signup(request):
@@ -49,11 +117,13 @@ def signup(request):
 
 
 def gallery(request):
-    return render(request, "gallery.html")
+    galls = Gallery.objects.all()
+    return render(request, "gallery.html", {'galls': galls})
 
 
 def package(request):
-    return render(request, "packages.html")
+    dests = Destination.objects.all()
+    return render(request, "packages.html", {'dests': dests})
 
 
 def explore(request):

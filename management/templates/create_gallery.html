@@ -1,0 +1,17 @@
+{% extends "dashboard_layout.html" %}
+{% block content %}
+    {% load static %}
+    <div class="create">
+        <form method="post" action="/create_gallery" enctype="multipart/form-data">
+            {% csrf_token %}
+            Name :{{ gal_form.Name }}<br>
+            Booking Number:{{ gal_form.Number }}<br>
+            Image:{{ gal_form.image }}<br>
+            <button type="submit">submit</button>
+            {% for message in messages %}
+                {{ message }}
+
+            {% endfor %}
+        </form>
+    </div>
+{% endblock %}

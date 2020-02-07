@@ -1,0 +1,29 @@
+{% extends "dashboard_layout.html" %}
+{% block content %}
+ {% load static %}
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>Booking Number</th>
+            <th>IMAGE</th>
+            <th>ACTION</th>
+            <th><form action="create_gallery"><button>Add Photos</button></form></th>
+        </tr>
+        {% for gall in galls %}
+        <tr>
+            <td>{{ gall.G_Id }}</td>
+            <td>{{ gall.Name }}</td>
+            <td>{{ gall.Number }}</td>
+            <td><img height="70px" width="100px" src="{% static '/photo/' %}{{ gall.image }}" /></td>
+            <td><a href="/gallery_edit/{{ gall.G_Id }}">edit</a>|<a href="/gallery_delete/{{ gall.G_Id }}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+<script>
+	$(document).ready(()=>{
+		$(".sidebar").find(".active").removeClass("active");
+		$("#gallery").addClass("active")
+    })
+</script>
+{% endblock %}

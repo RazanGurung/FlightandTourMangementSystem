@@ -29,6 +29,16 @@ urlpatterns = [
     path("explore", views.explore),
     path("news", views.news),
     path("rental", views.rental),
-    path("dashboard", views.dashboard),
-    path("adminlogin", views.admin)
+    path("package_dashboard", views.Package_dashboard),
+    path("adminlogin", views.admin),
+    path("create_package", views.create_package),
+    path("package_edit/<int:id>", views.package_edit),
+    path('package_update/<int:id>', views.package_update),
+    path('package_delete/<int:id>', views.package_delete),
+    path("create_gallery", views.create_gallery),
+    path("gallery_edit/<int:id>", views.gallery_edit),
+    path('gallery_update/<int:id>', views.gallery_update),
+    path('gallery_delete/<int:id>', views.gallery_delete),
+    path('gallery_dashboard', views.gallery_dashboard),
+    path('dashboard_client', views.dashboard_client)
 ]
