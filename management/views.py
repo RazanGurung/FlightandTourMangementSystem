@@ -1,6 +1,9 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
-
+from django.http import HttpResponseRedirect, HttpResponse
+from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate
 from management.forms import destinationform, galleryform
 from management.models import USER, Destination, Gallery
 from management.Authenticate import Authenticate
@@ -14,13 +17,13 @@ def login(request):
     return render(request, 'login.html')
 
 
-@Authenticate.valid_user
 def loginpage(request):
     request.session['email'] = request.POST['email']
     request.session['password'] = request.POST['password']
-    return redirect('/dashboard')
+    return redirect('/package_dashboard')
 
 
+@Authenticate.withid
 def Package_dashboard(request):
     dests = Destination.objects.all()
     return render(request, "package_dashboard.html", {'dests': dests})
